@@ -68,7 +68,7 @@ The training set brought the total number of data points to 1543 (696: Match, an
 ## Advantages of Docmatching with Oracle & Solr
 The main differences between the Docmatcher utilizing Classic vs. Oracle/Solr services is how the arXiv data and the DOI is treated, as well as confidence scoring. 
 
-The advantage of the Docmatcher using ADS API services is that it scores the similarity of abstract, title, author, year. On the Classic side, if there is a DOI, it takes it as a match and accepts it. Now on the API side, we compute the similarity scores of the metadata fields, and the final match is based on the confidence score. There were several common cases where the Oracle/Solr pipeline made improvements over the Classic pipeline in correctly identifying matches:
+The advantage of the Docmatcher using ADS API services is that it scores the similarity of abstract, title, author, year. On the Classic side, if there is a DOI, it takes it as a match and accepts it, which is problematic when that DOI is incorrect. Now on the API side, we compute the similarity scores of the metadata fields, including the DOI, and the final match is based on the confidence score. There were several common cases where the Oracle/Solr pipeline made improvements over the Classic pipeline in correctly identifying matches:
  
 - Based on the DOI provided, Docmatcher analyzes the match as a whole, not just by DOI alone.
 - Docmatcher results reveal when a curation improvement is needed to make a match.
