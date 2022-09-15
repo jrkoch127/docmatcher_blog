@@ -40,6 +40,16 @@ Users benefit from this merge; authors prefer their published papers to be cited
 4. Based on the similarity scores, Oracle determines if the two records are a match, and gives it a confidence score.
 5. Oracle sends the bibcode results to Docmatcher for Curation staff to review and verify.
 
+<p align="center"
+<div class="text-center">
+ <img class="img-thumbnail" alt="Flow diagram of Docmatcher Pipeline" src="https://github.com/jrkoch127/docmatcher_blog/blob/main/Docmatching%20Pipeline.jpg" width="800" align="center" />
+</div>
+</p> 
+<p align="center">
+           <em>Diagram of Docmatcher Pipeline</em>
+</p>
+<br>
+
 **Score Computation Model**:
 We trained a deep learning model, initially experimenting with the number of layers and nodes. We also considered the activation function, introducing non-linear complexities to the model (Brownlee, J., “[How to Choose an Activation Function for Deep Learning](https://machinelearningmastery.com/choose-an-activation-function-for-deep-learning/)”, MachineLearningMastery, 2021). For the intermediate layer, we chose the ReLU (Rectified Linear Unit), which basically zeros out negative values. Since this is a binary classification problem and the output is a probability, the output layer is a 1 node with a sigmoid function for the activation.
 
