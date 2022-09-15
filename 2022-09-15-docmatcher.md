@@ -22,7 +22,7 @@ ADS regularly retrieves data from arXiv, a free distribution service and open-ac
 ArXiv releases data [five times per week](https://arxiv.org/help/availability), and lately has averaged about [15k manuscripts per month](https://arxiv.org/stats/monthly_submissions), which makes about 680 manuscripts per release! Therefore, ADS indexes arXiv articles nightly, five times per week, via an OAI harvest, and tries to match incoming articles to those already in ADS. In addition, at the end of ADS weekly physics and astronomy collection updates, an attempt is made to match all new _peer-reviewed_ published papers to unmatched arXiv papers.
 
 ## Purpose & Benefits
-With so many preprints being released by arXiv, it is necessary that ADS analyze and process this content for multiple reasons:
+With so many preprints being released by arXiv, it is necessary that ADS process this content and match papers for multiple reasons:
 - We aim to ingest new records for content relevant to ADS collections in order to expand coverage of the scientific literature. 
 - We aim to keep ADS collections updated with the peer-reviewed versions that are published, so that users have the most accurate, up-to-date information possible. 
 - As a result, we improve citations and metrics, and eliminate double counting of a single scholarly work (preprint + published versions).
