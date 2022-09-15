@@ -31,7 +31,7 @@ Users benefit from this merge; authors prefer their published papers to be cited
 - Publishers like this merge because they prefer researchers to use the published version of the record as the definitive source.
 - For citation purposes; the matching allows ADS to capture citations made either with an arXiv ID, or with publisher metadata.
 
-## Development
+## Pipeline Development
 **Problem**: Given text and metadata (DOI, abstract, title, authors, year) of an input record, find a matching record that exists in ADS. If the record is an arXiv paper, the match has to be a publisher record; and the other way around. 
 
 **Solution**: Docmatcher utilizes ADS API services, first by processing the article metadata and sending it to Oracle. Using the Oracle service, it queries Solr, and computes the confidence score of the match(es). This process can be described in the following steps.
