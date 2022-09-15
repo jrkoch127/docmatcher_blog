@@ -33,6 +33,7 @@ Users benefit from this merge; authors prefer their published papers to be cited
 
 ## Development
 **Problem**: Given text and metadata (DOI, abstract, title, authors, year) of an input record, find a matching record that exists in ADS. If the record is an arXiv paper, the match has to be a publisher record; and the other way around. 
+
 **Solution**: Docmatcher utilizes ADS API services, first by processing the article metadata and sending it to Oracle. Using the Oracle service, it queries Solr, and computes the confidence score of the match(es). This process can be described in the following steps.
 
 1. Docmatcher is given a set of metadata (DOI, abstract, title, authors, year) for a paper, arXiv or otherwise, and sends it to the Oracle Service.
@@ -51,8 +52,7 @@ Users benefit from this merge; authors prefer their published papers to be cited
 </p>
 <br>
 
-**Score Computation Model**:
-We trained a deep learning model, initially experimenting with the number of layers and nodes. We also considered the activation function, introducing non-linear complexities to the model (Brownlee, J., “[How to Choose an Activation Function for Deep Learning](https://machinelearningmastery.com/choose-an-activation-function-for-deep-learning/)”, MachineLearningMastery, 2021). For the intermediate layer, we chose the ReLU (Rectified Linear Unit), which basically zeros out negative values. Since this is a binary classification problem and the output is a probability, the output layer is a 1 node with a sigmoid function for the activation.
+**Score Computation Model**: We trained a deep learning model, initially experimenting with the number of layers and nodes. We also considered the activation function, introducing non-linear complexities to the model (Brownlee, J., “[How to Choose an Activation Function for Deep Learning](https://machinelearningmastery.com/choose-an-activation-function-for-deep-learning/)”, MachineLearningMastery, 2021). For the intermediate layer, we chose the ReLU (Rectified Linear Unit), which basically zeros out negative values. Since this is a binary classification problem and the output is a probability, the output layer is a 1 node with a sigmoid function for the activation.
 
 We experimented with two loss functions: binary cross-entropy (logistic regression) which computes the cross-entropy loss between prediction and target, and MSE (linear regression) to compute the mean squared error between prediction and target. Cross-entropy loss measures the performance of a classification model whose output is a probability value between 0 and 1. It is preferred for classification, while mean squared error is used mostly for regression. The problem here can be looked at from both the classification, belonging to the match class, and the estimation, probability of being a match, and hence both loss functions can be applied.
 
