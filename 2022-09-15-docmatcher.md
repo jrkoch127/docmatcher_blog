@@ -13,6 +13,7 @@ thumbnail: blog/images/Docmatching%20Pipeline.jpg
 # ADS Docmatcher
 
 **Goal**: Match preprint records that exist in ADS to their published counterpart, and the reverse. 
+
 The primary aim of the Docmatcher pipeline is to match (arXiv) preprints to the peer-reviewed published version, and vice versa. ADS previously used Classic to accomplish this, however with recent updates and developments to ADS Solr, it has become a high priority to migrate Classic processes to Solr and eliminate Classic dependencies. Therefore, the ADS team has made new updates, tests, and implementations for this new version of the ADS Docmatcher.
 
 ## Background & arXiv Relationship
