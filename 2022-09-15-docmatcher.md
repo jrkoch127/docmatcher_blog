@@ -76,7 +76,7 @@ The advantage of the Docmatcher using ADS API services is that it scores the sim
 - Docmatcher now stores historical match data with confidence scores in a Postgres database within Oracle, so that it does not match related papers that have lower scores.
 
 ## The Future of Docmatcher
-ADS plans to utilize Docmatcher indefinitely to fulfill the needs of scientists and bring its inherent benefits to users engaging with ADS content. We will aim to improve the accuracy as necessary should new cases pop up, and the ADS Curation Team will validate new matches that have low confidence scores. A Curation workflow is in progress that will define the curators’ role in verifying matches.
+ADS plans to utilize Docmatcher indefinitely to fulfill the needs of scientists and bring its inherent benefits to users engaging with ADS content. We will aim to improve the accuracy as necessary should new cases pop up, and the ADS Curation Team will validate new matches that have low confidence scores. A Curation workflow is in progress that will define the curators’ role in verifying matches and merging the match results.
 
 **Future ADS development ideas inspired by Docmatcher**:
 - Incorporate preprints from ESSOAr: Earth and Space Science Open Archive
